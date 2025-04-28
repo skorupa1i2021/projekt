@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="pl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Dziennik praktyki zawodowej</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>Dziennik praktyki zawodowej</h1>
+            <nav>
+                <button id="btn-metryczka" class="active">Metryczka</button>
+                <button id="btn-dziennik">Dziennik zajęć</button>
+                <button id="btn-podsumowanie">Podsumowanie</button>
+            </nav>
+        </header>
+
+        <!-- Metryczka -->
+        <section id="metryczka" class="content-box">
+            <h2>Wprowadź dane ucznia i praktyki</h2>
+            <form id="student-form">
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="imie">Imię:</label>
+                        <input type="text" id="imie" name="imie" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="nazwisko">Nazwisko:</label>
+                        <input type="text" id="nazwisko" name="nazwisko" required>
+                    </div>
+                </div>
+                <div class="form-row">
+                    <div class="form-group">
+                        <label for="klasa">Klasa:</label>
+                        <input type="text" id="klasa" name="klasa" required>
+                    </div>
+                    <div class="form-group">
+                        <label for="rok-szkolny">Rok szkolny:</label>
+                        <input type="text" id="rok-szkolny" name="rok-szkolny" required>
+                    </div>
+                </div>
+                <div class="form-row center">
+                    <div class="form-group wide">
+                        <label for="miejsce">Odbytej w:</label>
+                        <input type="text" id="miejsce" name="miejsce" required>
+                    </div>
+                </div>
+                <div class="form-section">
+                    <h3>Czas trwania praktyki</h3>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="data-rozpoczecia">Data rozpoczęcia:</label>
+                            <input type="date" id="data-rozpoczecia" name="data-rozpoczecia" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="data-zakonczenia">Data zakończenia:</label>
+                            <input type="date" id="data-zakonczenia" name="data-zakonczenia" required>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="submit" id="btn-zatwierdz-dane">zatwierdź</button>
+                </div>
+            </form>
+        </section>
+
+        <!-- Dane ucznia - wyswietlenie -->
+        <section id="dane-ucznia" class="content-box hidden">
+            <h2>Dane ucznia</h2>
+            <div class="student-info">
+                <p>Imię i nazwisko: <span id="display-imie-nazwisko" class="highlight"></span></p>
+                <p>Klasa: <span id="display-klasa" class="highlight"></span>, rok szkolny: <span id="display-rok-szkolny" class="highlight"></span></p>
+                <p>Odbytej w: <span id="display-miejsce" class="highlight"></span></p>
+                <p>W terminie: od <span id="display-data-rozpoczecia" class="highlight"></span> do <span id="display-data-zakonczenia" class="highlight"></span></p>
+                <button id="btn-edit-dane" class  class="highlight"></span></p>
+                <button id="btn-edit-dane" class="edit-button">Edit</button>
+            </div>
+        </section>
+
+        <!-- Dziennik zajęć -->
+        <section id="dziennik" class="content-box hidden">
+            <h2>Wprowadź nowe zajęcia</h2>
+            <form id="activity-form">
+                <div class="form-section">
+                    <h3>Informacja o zajęciach</h3>
+                    <div class="form-row">
+                        <div class="form-group center wide">
+                            <label for="data-zajec">Wybierz datę zajęć:</label>
+                            <input type="date" id="data-zajec" name="data-zajec" required>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group center wide">
+                            <label for="dzial">Wybierz dział:</label>
+                            <select id="dzial" name="dzial" required>
+                                <option value="Moduł wstępny">Moduł wstępny</option>
+                                <option value="Montaż, naprawa, konserwacja i obsługa sprzętu komputerowego">Montaż, naprawa, konserwacja i obsługa sprzętu komputerowego</option>
+                                <option value="Systemy informatyczne">Systemy informatyczne</option>
+                                <option value="Tworzenie aplikacji internetowych">Tworzenie aplikacji internetowych</option>
+                            </select>
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group center wide">
+                            <label for="temat">Wybierz temat:</label>
+                            <select id="temat" name="temat" required>                                
+                            </select>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-section">
+                    <h3>Opiekun</h3>
+                    <div class="form-row supervisor">
+                        <div class="supervisor-option">
+                            <input type="radio" id="opiekun1" name="opiekun" value="Jerzy Kot" required>
+                            <label for="opiekun1">Jerzy Kot</label>
+                        </div>
+                        <div class="supervisor-option">
+                            <input type="radio" id="opiekun2" name="opiekun" value="Maria Nowak">
+                            <label for="opiekun2">Maria Nowak</label>
+                        </div>
+                        <div class="supervisor-option">
+                            <input type="radio" id="opiekun3" name="opiekun" value="Konstanty Kowal">
+                            <label for="opiekun3">Konstanty Kowal</label>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-section">
+                    <h3>Realizacja materiału</h3>
+                    <div class="form-row">
+                        <div class="form-group wide">
+                            <label for="sprawozdanie">Sprawozdanie:</label>
+                            <textarea id="sprawozdanie" name="sprawozdanie" rows="5" required></textarea>
+                        </div>
+                        <div class="form-group checkbox-group">
+                            <label>Zrealizowano:</label>
+                            <input type="checkbox" id="zrealizowano" name="zrealizowano">
+                        </div>
+                    </div>
+                    <div class="form-row">
+                        <div class="form-group">
+                            <label for="ile-godzin">Ile godzin:</label>
+                            <input type="number" id="ile-godzin" name="ile-godzin" min="1" max="8" required>
+                        </div>
+                        <div class="form-group slider-group">
+                            <label for="stopien-opanowania">Stopień opanowania materiału:</label>
+                            <div class="slider-container">
+                                <span>1</span>
+                                <input type="range" id="stopien-opanowania" name="stopien-opanowania" min="1" max="6" value="1">
+                                <span>6</span>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="form-actions">
+                    <button type="button" id="btn-wyczysc">wyczyść</button>
+                    <button type="submit" id="btn-dodaj">dodaj</button>
+                </div>
+            </form>
+            <div class="remaining-hours">
+                <p>Pozostało do zrealizowania: <span id="remaining-hours" class="highlight">140</span> godz.</p>
+            </div>
+            <div class="topics-section">
+                <h2>Realizacja tematów</h2>
+                <div id="topics-list">                   
+                </div>
+            </div>
+        </section>
+
+        <!-- Podsumowanie -->
+        <section id="podsumowanie" class="content-box hidden">
+            <div id="summary-content">               
+            </div>
+        </section>
+
+        <!-- Zrealizowane tematy -->
+        <section id="zrealizowane-tematy" class="content-box hidden">
+            <h2>Zrealizowane tematy</h2>
+            <div id="completed-topics">                
+            </div>
+        </section>
+
+        <footer>
+            <p>© Me XXI w.</p>
+        </footer>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>

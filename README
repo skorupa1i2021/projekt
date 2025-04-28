@@ -1,0 +1,76 @@
+Dziennik praktyki zawodowej
+
+Opis projektu
+
+Dziennik praktyki zawodowej to aplikacja umożliwiająca uczniom prowadzenie elektronicznego dziennika praktyk zawodowych. Aplikacja pozwala na rejestrowanie danych ucznia, dokumentowanie zrealizowanych tematów, śledzenie postępu godzinowego oraz generowanie podsumowania z oceną końcową.
+
+Funkcjonalności:
+    - Wprowadzanie i edycja danych ucznia
+    - Rejestrowanie zrealizowanych tematów z podziałem na działy
+    - Przypisywanie godzin i ocen do poszczególnych tematów
+    - Automatyczne obliczanie pozostałych godzin do zrealizowania
+    - Generowanie podsumowania z oceną końcową (średnia ocen)
+    
+Instrukcja obsługi
+1. Uruchomienie aplikacji
+
+Aby uruchomić aplikację, otwórz plik index.html w przeglądarce internetowej. Aplikacja składa się z trzech głównych sekcji:
+
+    Metryczka
+    Dziennik zajęć
+    Podsumowanie
+
+2. Wprowadzanie danych ucznia
+
+    Po uruchomieniu aplikacji domyślnie wyświetla się sekcja "Metryczka".
+
+    Wypełnij formularz danymi ucznia:
+        Imię
+        Nazwisko
+        Klasa
+        Rok szkolny
+        Miejsce odbywania praktyki
+        Data rozpoczęcia praktyki
+        Data zakończenia praktyki
+    Kliknij przycisk "zatwierdź" aby zapisać dane.
+    Po zatwierdzeniu danych zostaniesz automatycznie przekierowany do sekcji "Dziennik zajęć".
+
+3. Dodawanie zajęć w dzienniku
+
+    W sekcji "Dziennik zajęć" zobaczysz formularz do wprowadzania nowych zajęć oraz informacje o uczniu.
+
+    Wypełnij formularz:
+        Wybierz datę zajęć
+        Wybierz dział z rozwijanej listy
+        Wybierz temat z rozwijanej listy (tematy zmieniają się w zależności od wybranego działu)
+        Wybierz opiekuna praktyk
+        Wprowadź sprawozdanie z zajęć
+        Zaznacz pole "Zrealizowano" jeśli temat został w pełni zrealizowany
+        Wprowadź liczbę godzin (1-8)
+        Ustaw stopień opanowania materiału (1-6)
+    Kliknij przycisk "dodaj" aby zapisać zajęcia.
+    Po dodaniu zajęć, informacje o nich pojawią się w sekcji "Realizacja tematów".
+    Licznik "Pozostało do zrealizowania" będzie aktualizowany automatycznie.
+
+4. Przeglądanie podsumowania
+
+    Kliknij przycisk "Podsumowanie" w górnym menu.
+
+    W sekcji podsumowania zobaczysz:
+        Tabelę z liczbą zrealizowanych godzin dla każdego modułu
+        Łączną liczbę zrealizowanych godzin
+        Liczbę pozostałych godzin do zrealizowania
+        Proponowaną ocenę końcową (obliczaną jako średnia ze wszystkich ocen)
+    Poniżej tabeli znajduje się sekcja "Zrealizowane tematy" zawierająca szczegółowe informacje o wszystkich dodanych zajęciach.
+
+5. Edycja danych ucznia
+
+    W dowolnym momencie możesz edytować dane ucznia klikając przycisk "Edit" w sekcji "Dane ucznia".
+    Zostaniesz przekierowany do sekcji "Metryczka" z wypełnionym formularzem.
+    Wprowadź zmiany i kliknij "zatwierdź" aby zapisać nowe dane.
+
+6. Czyszczenie formularza zajęć
+
+    Jeśli chcesz wyczyścić formularz zajęć bez dodawania ich do dziennika, kliknij przycisk "wyczyść".
+    Wszystkie pola formularza zostaną zresetowane do wartości domyślnych.
+
